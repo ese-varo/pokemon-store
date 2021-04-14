@@ -31,12 +31,32 @@ function PokemonCardList () {
   }
 
   return pokemon ? (
-    <PokemonCard
-      imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
-      name={pokemon.name}
-      types={pokemon.types}
-      id={pokemon.id}
-    />
+    <div className='row'>
+      <PokemonCard
+        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
+        name={pokemon.name}
+        types={pokemon.types}
+        id={pokemon.id}
+      />
+      <PokemonCard
+        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
+        name={pokemon.name}
+        types={pokemon.types}
+        id={pokemon.id}
+      />
+      <PokemonCard
+        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
+        name={pokemon.name}
+        types={pokemon.types}
+        id={pokemon.id}
+      />
+      <PokemonCard
+        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
+        name={pokemon.name}
+        types={pokemon.types}
+        id={pokemon.id}
+      />
+    </div>
   ) : (
     <p>loading</p>
   )
