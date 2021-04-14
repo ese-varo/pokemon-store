@@ -15,6 +15,7 @@ function Content () {
           id="controlled-tab-example"
           activeKey={key}
           onSelect={(k) => setKey(k)}
+          className='mb-3'
         >
 
           <Tab eventKey="pokemon-list" title="Home">

@@ -4,26 +4,23 @@ import PokemonType from './PokemonType'
 function PokemonCard({ imageUrl, name, types, id }) {
   return (
     <>
-      <div className='col-sm'>
-        <div className='card mt-4'>
+      <div className='col mb-3'>
+        <div className='card h-100 text-center'>
           <img
             src={imageUrl}
             alt='Pokemon cover'
             className='card-img-top'
           />
-          <div className='card-body text-center'>
+          <div className='card-body text-center pb-0 pt-2'>
             <h5 className='card-title'>{name}</h5>
-            <div className='card-text text-center'>
+            <div className='card-text'>
               <p><span className='text-muted'>Price:</span> ${id}</p>
             </div>
-            <div className='card-header'>Types</div>
-            <ul className='list-group list-group-flush'>
-              {types.map((type, i) => <PokemonType key={i} type={type} />)}
-              <li className='list-group-item'>
-                <button className='btn btn-primary btn-sm'>Add to cart</button>
-              </li>
-            </ul>
           </div>
+          <div className='d-flex text-center types'>
+            {types.map((type, i) => <PokemonType key={i} type={type} />)}
+          </div>
+          <button className='btn btn-primary btn-sm mt-2'>Add to cart</button>
         </div>
       </div>
     </>
