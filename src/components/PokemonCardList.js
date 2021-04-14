@@ -1,61 +1,24 @@
 import React from 'react' // eslint-disable-line no-unused-vars
 import PokemonCard from './PokemonCard'
 
-const pokemonBaseUrl = 'https://pokeapi.co/api/v2/pokemon/'
-const imageBaseUrl = 'https://pokeres.bastionbot.org/images/pokemon/'
+const pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/'
+const endpoint = '?limit=2'
 
 function PokemonCardList () {
-  const [pokemon, setPokemon] = React.useState(null)
+  const [pokemons, setPokemons] = React.useState(null) // eslint-disable-line no-unused-vars
 
   React.useEffect(() => {
-    async function getPokemon() {
-      const response = await fetch(`${pokemonBaseUrl}43/`)
+    async function getPokemons() {
+      const response = await fetch(`${pokemonsUrl}${endpoint}`)
       const data = await response.json()
-      setPokemon(getPokemonData(data))
+      setPokemons(data)
     }
-    getPokemon()
+    getPokemons()
   }, [])
 
-  function getPokemonData(data) {
-    let pokemonData = data
-    pokemonData.types = getTypes(pokemonData.types)
-    return pokemonData
-  }
-
-  function getTypes(types) {
-    let pokemonTypes = []
-    types.forEach(type => {
-      pokemonTypes.push(type['type']['name'])
-    })
-    return pokemonTypes
-  }
-
-  return pokemon ? (
-    <div className='row row-cols-1 row-cols-md-3'>
-      <PokemonCard
-        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
-        name={pokemon.name}
-        types={pokemon.types}
-        id={pokemon.id}
-      />
-      <PokemonCard
-        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
-        name={pokemon.name}
-        types={pokemon.types}
-        id={pokemon.id}
-      />
-      <PokemonCard
-        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
-        name={pokemon.name}
-        types={pokemon.types}
-        id={pokemon.id}
-      />
-      <PokemonCard
-        imageUrl={`${imageBaseUrl}${pokemon.id}.png`}
-        name={pokemon.name}
-        types={pokemon.types}
-        id={pokemon.id}
-      />
+  return pokemons ? (
+    <div className='row'>
+      {pokemons.results.map((pokemon) => <PokemonCard key={`${Date.now}-${pokemon.name}`} url={pokemon.url} />)}
     </div>
   ) : (
     <p>loading</p>

@@ -10,7 +10,6 @@ function Content () {
   return (
     <>
       <div className="container">
-        <h1>Pokemon Store</h1>
         <Tabs
           id="controlled-tab-example"
           activeKey={key}
@@ -18,7 +17,7 @@ function Content () {
           className='mb-3'
         >
 
-          <Tab eventKey="pokemon-list" title="Home">
+          <Tab eventKey="pokemon-list" title="Pokemon List">
             <PokemonCardList />
           </Tab>
 
