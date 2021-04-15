@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar sticky-top navbar-light bg-light"
+  >
+    <div
+      class="container-fluid"
+    >
+      <a
+        class="navbar-brand"
+        href="#"
+      >
+        Pokemon Store
+      </a>
+      <div
+        class="d-flex"
+      >
+        <span
+          class="cart-items-counter badge badge-danger"
+        >
+          Cart items 
+          <span
+            class="cart-number-counter badge badge-pill badge-dark"
+            data-testid="cart-counter"
+            id="cart-counter-badge"
+          >
+            0
+          </span>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="container"
+  >
+    <nav
+      class="mb-3 nav nav-tabs"
+      role="tablist"
+    >
+      <a
+        aria-controls="controlled-tab-example-tabpane-pokemon-list"
+        aria-selected="true"
+        class="nav-item nav-link active"
+        data-rb-event-key="pokemon-list"
+        href="#"
+        id="controlled-tab-example-tab-pokemon-list"
+        role="tab"
+      >
+        Pokemon List
+      </a>
+      <a
+        aria-controls="controlled-tab-example-tabpane-my-pokemons"
+        aria-selected="false"
+        class="nav-item nav-link"
+        data-rb-event-key="my-pokemons"
+        href="#"
+        id="controlled-tab-example-tab-my-pokemons"
+        role="tab"
+      >
+        My pokemons
+      </a>
+      <a
+        aria-controls="controlled-tab-example-tabpane-cart"
+        aria-selected="false"
+        class="nav-item nav-link"
+        data-rb-event-key="cart"
+        href="#"
+        id="controlled-tab-example-tab-cart"
+        role="tab"
+      >
+        Cart
+      </a>
+    </nav>
+    <div
+      class="tab-content"
+    >
+      <div
+        aria-hidden="false"
+        aria-labelledby="controlled-tab-example-tab-pokemon-list"
+        class="fade tab-pane active show"
+        id="controlled-tab-example-tabpane-pokemon-list"
+        role="tabpanel"
+      >
+        <p>
+          loading
+        </p>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="controlled-tab-example-tab-my-pokemons"
+        class="fade tab-pane"
+        id="controlled-tab-example-tabpane-my-pokemons"
+        role="tabpanel"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-header"
+          >
+            Pokemons
+          </div>
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              My purchased pokemons
+            </div>
+            <p
+              data-testid="empty-list"
+            >
+              You haven't bought any pokemon yet
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="controlled-tab-example-tab-cart"
+        class="fade tab-pane"
+        id="controlled-tab-example-tabpane-cart"
+        role="tabpanel"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-header"
+          >
+            My shoping cart
+          </div>
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              Pokemons to buy
+            </div>
+            <div
+              class="cart-list list-group"
+            />
+            <p
+              class="mt-3"
+            >
+              <span
+                class="text-muted"
+              >
+                Total: 
+              </span>
+              $0
+            </p>
+            <p
+              class="mt-3"
+            >
+              <span
+                class="text-muted"
+                data-testid="quantity"
+              >
+                Quantity: 
+              </span>
+              0
+            </p>
+            <button
+              disabled=""
+              style="background: rgba(0, 0, 0, 0.2); overflow: hidden; display: inline-block; border: 0px; padding: 1px; text-decoration: none; border-radius: 5px; user-select: none;"
+            >
+              <span
+                style="box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); font-family: \\"Helvetica Neue\\",Helvetica,Arial,sans-serif; font-size: 14px; position: relative; padding: 0px 12px; display: block; height: 30px; line-height: 30px; border-radius: 4px; color: rgb(153, 153, 153); background: rgb(248, 249, 250); text-shadow: 0 1px 0 rgba(255,255,255,0.5);"
+              >
+                Pay With Card
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

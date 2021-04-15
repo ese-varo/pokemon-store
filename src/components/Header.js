@@ -11,11 +11,15 @@ function Header () {
         <div className='d-flex'>
           {state.cartCounter ? (
             <span className='cart-items-counter badge badge-warning'>
-              Cart items <span id='cart-counter-badge' className='cart-number-counter badge badge-pill badge-info'>{state.cartCounter}</span>
+              Cart items <span id='cart-counter-badge'
+                               data-testid='cart-counter'
+                               className='cart-number-counter badge badge-pill badge-info'>{state.cartCounter}</span>
             </span>
           ) : (
             <span className='cart-items-counter badge badge-danger'>
-              Cart items <span id='cart-counter-badge' className='cart-number-counter badge badge-pill badge-dark'>{state.cartCounter}</span>
+              Cart items <span id='cart-counter-badge'
+                               data-testid='cart-counter'
+                               className='cart-number-counter badge badge-pill badge-dark'>{state.cartCounter}</span>
             </span>
           )}
         </div>

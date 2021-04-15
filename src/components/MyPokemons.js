@@ -16,7 +16,7 @@ function MyPokemons () {
             <ListGroup>
               {state.myPokemons.map((pokemon, i) => <PokemonItem key={`${Date.now()}-${i}`} pokemon={pokemon} />)}
             </ListGroup>
-          ) : <p>You haven&apos;t bought any pokemon yet</p>}
+          ) : <p data-testid='empty-list'>You haven&apos;t bought any pokemon yet</p>}
         </Card.Body>
       </Card>
     </>
