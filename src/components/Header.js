@@ -10,10 +10,14 @@ function Header () {
         <a className='navbar-brand' href='#'>Pokemon Store</a>
         <div className='d-flex'>
           {state.cartCounter ? (
-            <span className='cart-items-counter badge badge-danger'>
-              Cart <span className='badge badge-pill badge-dark'>{state.cartCounter}</span>
+            <span className='cart-items-counter badge badge-warning'>
+              Cart items <span id='cart-counter-badge' className='cart-number-counter badge badge-pill badge-info'>{state.cartCounter}</span>
             </span>
-          ) : ('')}
+          ) : (
+            <span className='cart-items-counter badge badge-danger'>
+              Cart items <span id='cart-counter-badge' className='cart-number-counter badge badge-pill badge-dark'>{state.cartCounter}</span>
+            </span>
+          )}
         </div>
       </div>
     </nav>

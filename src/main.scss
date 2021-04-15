@@ -9,6 +9,12 @@
 
 .cart-items-counter { font-size: 1rem !important; }
 
+.cart-number-counter {
+  font-size: 1rem !important;
+  position: absolute;
+  transform: translate(0px, -15px);
+}
+
 .cart-item {
   justify-content: space-between;
 }

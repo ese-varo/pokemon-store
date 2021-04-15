@@ -12,9 +12,11 @@ function MyPokemons () {
         <Card.Header>Pokemons</Card.Header>
         <Card.Body>
           <Card.Title>My purchased pokemons</Card.Title>
-          <ListGroup>
-            {state.myPokemons.map((pokemon, i) => <PokemonItem key={`${Date.now()}-${i}`} pokemon={pokemon} />)}
-          </ListGroup>
+          {state.myPokemons.length ? (
+            <ListGroup>
+              {state.myPokemons.map((pokemon, i) => <PokemonItem key={`${Date.now()}-${i}`} pokemon={pokemon} />)}
+            </ListGroup>
+          ) : <p>You haven&apos;t bought any pokemon yet</p>}
         </Card.Body>
       </Card>
     </>
