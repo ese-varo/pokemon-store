@@ -30,7 +30,7 @@ function Cart () {
               <p className='mt-3'><span className='text-muted'>Total: </span>${state.cartTotal}</p>
               <p className='mt-3'><span className='text-muted'>Quantity: </span>{state.cartCounter}</p>
               <StripeCheckout 
-                stripeKey='STRIPE_SECRET'
+                stripeKey={process.env.REACT_APP_STRIPE_SECRET}
                 token={handleToken}
               />
             </>

@@ -7,7 +7,6 @@ function CartItem ({ pokemon }) {
 
   function handleRemoveItem() {
     const id = pokemon.id
-    console.log('pokemon id: ' + id)
     dispatch({ type: 'REMOVE_FROM_CART', payload: { id } })
   }
 
