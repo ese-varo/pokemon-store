@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/pokemon-store/static/css/main.2c1a03f2.chunk.css",
-    "main.js": "/pokemon-store/static/js/main.95d41f55.chunk.js",
-    "main.js.map": "/pokemon-store/static/js/main.95d41f55.chunk.js.map",
+    "main.css": "/pokemon-store/static/css/main.eb8a8406.chunk.css",
+    "main.js": "/pokemon-store/static/js/main.6e9a611e.chunk.js",
+    "main.js.map": "/pokemon-store/static/js/main.6e9a611e.chunk.js.map",
     "runtime-main.js": "/pokemon-store/static/js/runtime-main.a6f14f7a.js",
     "runtime-main.js.map": "/pokemon-store/static/js/runtime-main.a6f14f7a.js.map",
     "static/css/2.658248ec.chunk.css": "/pokemon-store/static/css/2.658248ec.chunk.css",
-    "static/js/2.bb74ae38.chunk.js": "/pokemon-store/static/js/2.bb74ae38.chunk.js",
-    "static/js/2.bb74ae38.chunk.js.map": "/pokemon-store/static/js/2.bb74ae38.chunk.js.map",
+    "static/js/2.6f11b79e.chunk.js": "/pokemon-store/static/js/2.6f11b79e.chunk.js",
+    "static/js/2.6f11b79e.chunk.js.map": "/pokemon-store/static/js/2.6f11b79e.chunk.js.map",
     "index.html": "/pokemon-store/index.html",
     "static/css/2.658248ec.chunk.css.map": "/pokemon-store/static/css/2.658248ec.chunk.css.map",
-    "static/css/main.2c1a03f2.chunk.css.map": "/pokemon-store/static/css/main.2c1a03f2.chunk.css.map",
-    "static/js/2.bb74ae38.chunk.js.LICENSE.txt": "/pokemon-store/static/js/2.bb74ae38.chunk.js.LICENSE.txt"
+    "static/css/main.eb8a8406.chunk.css.map": "/pokemon-store/static/css/main.eb8a8406.chunk.css.map",
+    "static/js/2.6f11b79e.chunk.js.LICENSE.txt": "/pokemon-store/static/js/2.6f11b79e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6f14f7a.js",
     "static/css/2.658248ec.chunk.css",
-    "static/js/2.bb74ae38.chunk.js",
-    "static/css/main.2c1a03f2.chunk.css",
-    "static/js/main.95d41f55.chunk.js"
+    "static/js/2.6f11b79e.chunk.js",
+    "static/css/main.eb8a8406.chunk.css",
+    "static/js/main.6e9a611e.chunk.js"
   ]
 }
