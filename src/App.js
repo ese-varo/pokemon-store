@@ -17,9 +17,7 @@ function App () {
   return (
     <SessionContext.Provider value={{ state, dispatch }}>
       <Header />
-      <div className='container'>
-        <Content />
-      </div>
+      <Content />
     </SessionContext.Provider>
   )
 }
