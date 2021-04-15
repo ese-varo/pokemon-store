@@ -2,7 +2,7 @@ import React from 'react' // eslint-disable-line no-unused-vars
 import PokemonCard from './PokemonCard'
 
 const pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/'
-const endpoint = '?limit=2'
+const endpoint = '?limit=50'
 
 function PokemonCardList () {
   const [pokemons, setPokemons] = React.useState(null) // eslint-disable-line no-unused-vars

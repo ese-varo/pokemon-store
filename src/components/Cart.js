@@ -2,9 +2,15 @@ import React from 'react' // eslint-disable-line no-unused-vars
 import { ListGroup, Card, Button } from 'react-bootstrap' // eslint-disable-line no-unused-vars
 import CartItem from './CartItem'
 import { SessionContext } from '../App'
+import StripeCheckout from 'react-stripe-checkout'
 
 function Cart () {
   const { state, dispatch } = React.useContext(SessionContext)
+
+  function handleToken(token, addresses) { // eslint-disable-line no-unused-vars
+    // handle paying process
+    handlePurchasePokemons()
+  }
 
   function handlePurchasePokemons() {
     dispatch({ type: 'PURCHASE_POKEMONS' })
@@ -23,7 +29,10 @@ function Cart () {
             <>
               <p className='mt-3'><span className='text-muted'>Total: </span>${state.cartTotal}</p>
               <p className='mt-3'><span className='text-muted'>Quantity: </span>{state.cartCounter}</p>
-              <Button variant='primary' onClick={handlePurchasePokemons} className='mt-3'>Purchase</Button>
+              <StripeCheckout 
+                stripeKey='STRIPE_SECRET'
+                token={handleToken}
+              />
             </>
           ) : ''}
         </Card.Body>
