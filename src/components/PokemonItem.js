@@ -2,13 +2,12 @@ import React from 'react' // eslint-disable-line no-unused-vars
 import { ListGroup, Card, Button } from 'react-bootstrap' // eslint-disable-line no-unused-vars
 import { SessionContext } from '../App'
 
-function CartItem ({ pokemon }) {
+function PokemonItem ({ pokemon }) {
   const { dispatch } = React.useContext(SessionContext)
 
   function handleRemoveItem() {
     const id = pokemon.id
-    console.log('pokemon id: ' + id)
-    dispatch({ type: 'REMOVE_FROM_CART', payload: { id } })
+    dispatch({ type: 'REMOVE_FROM_MY_POKEMONS', payload: { id } })
   }
 
   return (
@@ -24,4 +23,4 @@ function CartItem ({ pokemon }) {
   )
 }
 
-export default CartItem
+export default PokemonItem

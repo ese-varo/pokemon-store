@@ -4,7 +4,11 @@ import CartItem from './CartItem'
 import { SessionContext } from '../App'
 
 function Cart () {
-  const { state } = React.useContext(SessionContext)
+  const { state, dispatch } = React.useContext(SessionContext)
+
+  function handlePurchasePokemons() {
+    dispatch({ type: 'PURCHASE_POKEMONS' })
+  }
 
   return (
     <>
@@ -15,7 +19,7 @@ function Cart () {
           <ListGroup className='cart-list'>
             {state.cartPokemons.map((pokemon, i) => <CartItem key={`${Date.now()}-${i}`} pokemon={pokemon} />)}
           </ListGroup>
-          <Button variant='primary' className='mt-3'>Purchase</Button>
+          <Button variant='primary' onClick={handlePurchasePokemons} className='mt-3'>Purchase</Button>
         </Card.Body>
       </Card>
     </>

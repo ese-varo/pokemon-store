@@ -18,7 +18,7 @@ function PokemonCard({ url }) {
   }, [])
 
   function handleAddToCart() {
-    const cartItem = { name: pokemon.name, id: `${Date.now()}-${pokemon.id}` }
+    const cartItem = { name: pokemon.name, id: `${Date.now()}-${pokemon.id}`, price: pokemon.id }
     dispatch({ type: 'ADD_TO_CART', payload: { cartItem } })
   }
 

@@ -5,6 +5,7 @@ import sessionReducer from './reducer'
 
 export const SessionContext = React.createContext({
   cartTotal: 0,
+  cartCounter: 0,
   myPokemons: [],
   cartPokemons: []
 })
