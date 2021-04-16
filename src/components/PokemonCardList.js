@@ -11,17 +11,16 @@ function PokemonCardList () {
     async function getPokemons() {
       const response = await fetch(`${pokemonsUrl}${endpoint}`)
       const data = await response.json()
-      setPokemons(data)
+      setPokemons(data.results)
     }
     getPokemons()
   }, [])
 
-  return pokemons ? (
+  if (!pokemons) return <p>loading...</p>
+  return (
     <div className='row'>
-      {pokemons.results.map((pokemon) => <PokemonCard key={`${Date.now}-${pokemon.name}`} url={pokemon.url} />)}
+      {pokemons.map((pokemon) => <PokemonCard key={`${Date.now}-${pokemon.name}`} url={pokemon.url} />)}
     </div>
-  ) : (
-    <p>loading</p>
   )
 }
 

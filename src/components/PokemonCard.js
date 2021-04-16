@@ -36,35 +36,32 @@ function PokemonCard({ url }) {
     return pokemonTypes
   }
 
-  return pokemon ? (
-    <>
-      <div className='col mb-3 pokemon-card'>
-        <div className='card h-100 text-center'>
-          <img
-            src={`${imageBaseUrl}${pokemon.id}.png`}
-            alt='Pokemon cover'
-            className='card-img-top'
-          />
-          <div className='card-body text-center pb-0 pt-2'>
-            <h6 className='card-title'>{pokemon.name}</h6>
-            <div className='card-text'>
-              <p>
-                <span className='text-muted'>Price:</span> <span className='badge badge-pill badge-info'>${pokemon.id}</span>
-              </p>
-            </div>
+  if (!pokemon) return <p>...loading</p>
+  return (
+    <div className='col mb-3 pokemon-card'>
+      <div className='card h-100 text-center'>
+        <img
+          src={`${imageBaseUrl}${pokemon.id}.png`}
+          alt='Pokemon cover'
+          className='card-img-top'
+        />
+        <div className='card-body text-center pb-0 pt-2'>
+          <h6 className='card-title'>{pokemon.name}</h6>
+          <div className='card-text'>
+            <p>
+              <span className='text-muted'>Price:&nbsp;</span>
+              <span className='badge badge-pill badge-info'>${pokemon.id}</span>
+            </p>
           </div>
-          <div className='d-flex text-center types'>
-            {pokemon.types.map((type, i) => <PokemonType key={i} type={type} />)}
-          </div>
-          <button
-            className='btn btn-dark btn-sm mt-2'
-            onClick={handleAddToCart}
-          >Add to cart</button>
         </div>
+        <div className='d-flex text-center types'>
+          {pokemon.types.map((type, i) => <PokemonType key={i} type={type} />)}
+        </div>
+        <button className='btn btn-dark btn-sm mt-2' onClick={handleAddToCart}>
+          Add to cart
+        </button>
       </div>
-    </>
-  ) : (
-    <p>loading</p>
+    </div>
   )
 }
 

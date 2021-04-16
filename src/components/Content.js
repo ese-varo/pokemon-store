@@ -8,29 +8,27 @@ function Content () {
   const [key, setKey] = React.useState('pokemon-list')
 
   return (
-    <>
-      <div className="container">
-        <Tabs
-          id="controlled-tab-example"
-          activeKey={key}
-          onSelect={(k) => setKey(k)}
-          className='mb-3'
-        >
+    <div className="container">
+      <Tabs
+        id="controlled-tab-example"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+        className='mb-3'
+      >
 
-          <Tab eventKey="pokemon-list" title="Pokemon List">
-            <PokemonCardList />
-          </Tab>
+        <Tab eventKey="pokemon-list" title="Pokemon List">
+          <PokemonCardList />
+        </Tab>
 
-          <Tab eventKey="my-pokemons" title="My pokemons">
-            <MyPokemons />
-          </Tab>
+        <Tab eventKey="my-pokemons" title="My pokemons">
+          <MyPokemons />
+        </Tab>
 
-          <Tab eventKey="cart" title="Cart">
-            <Cart />
-          </Tab>
-        </Tabs>
-      </div>
-    </>
+        <Tab eventKey="cart" title="Cart">
+          <Cart />
+        </Tab>
+      </Tabs>
+    </div>
   )
 }
 
